@@ -68,7 +68,60 @@
 
 \tableofcontents[currentsection]
 
-=== Subsection 1 ===
+== Bloscpack ==
+
+==== And now some «stuff» layerd on top! ====
+
+* '''Bloscpack'''
+* Command-line interface
+* File-format
+* '''Numpy''' array serialization
+* Pure-python based on Python-Blosc
+
+==== More Code, Yo! ====[containsverbatim]
+
+<[pycode]
+>>> import bloscpack, numpy
+>>> b = numpy.arange(5e6)
+>>> c = bloscpack.pack_ndarray_str(b)
+>>> len(b)/len(c)
+15.359992135684026
+[pycode]>
+
+==== And Back Again ====[containsverbatim]
+
+<[pycode]
+>>> d = bloscpack.unpack_ndarray_str(c)
+>>> assert (b == d).all()
+[pycode]>
+
+==== Command-line Usability ====[containsverbatim]
+
+<[pycode]
+>>> np.save('b.npy', b)
+[pycode]>
+
+<[consolecode]
+$ ./blpk compress b.npy
+$ ls -la b.npy b.npy.blp
+-rw------- 1 esc esc 40000080 May 13 21:50 b.npy
+-rw------- 1 esc esc   325635 May 13 21:52 b.npy.blp
+[consolecode]>
+
+
+==== Format ====
+
+* A '''simple''' file format
+* '''Checksum''' optional
+
+<[center]
+<<<images/bloscpack.pdf, scale=0.3>>>
+[center]>
+
+==== Help ====
+
+* @pack\_ndarray\_'''str'''@ <-- '''str''', really?!
+* Py3 support not merged :(
 
 ==== Outline ====
 

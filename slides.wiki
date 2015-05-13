@@ -1,16 +1,45 @@
-== Section 1 ==
+== Blosc  ==
 
 ==== Outline ====
 
 \tableofcontents[currentsection]
 
-==== slide 1 ====
+==== Blosc ====
 
-* bullet 1
-* bullet 2
-* bullet 3
+* '''Blocking''' by operating on data in blocks
+* '''Shuffling''' by doing a byte shuffle
+* '''Fast''' by multithreading across '''blocks'''
+* '''Metacodec''' because it can drive '''[lz4|snappy|zlib]'''
 
-==  Section 2 ==
+==== Blosc ====
+
+<[center]
+<<<images/blosc.pdf, scale=0.3>>>
+[center]>
+
+==  Python-Blosc ==
+
+==== Python-Blosc ====
+
+* '''Python-blosc''' <-- python bindings
+
+==== Code, Yo! ====[containsverbatim]
+
+<[pycode]
+>>> import blosc
+>>> plain = "".join((str(i).zfill(8) for i in range(1000000)))
+>>> compressed = blosc.compress(plain, typesize=8)
+>>> print(len(plain)/len(compressed))
+127.4737882023009
+[pycode]>
+
+==== C'mmon man, your pulling my leg?! ==== [containsverbatim]
+
+<[pycode]
+>>> decompressed = blosc.decompress(compressed)
+>>> assert plain == decompressed
+>>> assert bytes(plain, 'ascii') == decompressed
+[pycode]>
 
 ==== Outline ====
 

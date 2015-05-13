@@ -4,6 +4,11 @@
 
 \tableofcontents[currentsection]
 
+==== Disclaimer ====
+
+* All examples with Py3
+* No comparisons to other technologies
+
 ==== Blosc ====
 
 * '''Blocking''' by operating on data in blocks

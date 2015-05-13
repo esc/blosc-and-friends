@@ -22,29 +22,47 @@
 <<<images/blosc.pdf, scale=0.3>>>
 [center]>
 
+==== Blosc ====
+
+* Other codecs vendored
+
 ==  Python-Blosc ==
 
 ==== Python-Blosc ====
 
-* '''Python-blosc''' <-- python bindings
+* '''Python-Blosc''' <-- python bindings
+* Blosc (and codecs) are vendored
+* Can be dynamically linked
 
 ==== Code, Yo! ====[containsverbatim]
 
 <[pycode]
 >>> import blosc
->>> plain = "".join((str(i).zfill(8) for i in range(1000000)))
->>> compressed = blosc.compress(plain, typesize=8)
->>> print(len(plain)/len(compressed))
-127.4737882023009
+>>> b = b"b"*888
+>>> c = blosc.compress(plain, typesize=8)
+>>> print(len(b)/len(c))
+23.36842105263158
 [pycode]>
 
 ==== C'mmon man, your pulling my leg?! ==== [containsverbatim]
 
 <[pycode]
->>> decompressed = blosc.decompress(compressed)
->>> assert plain == decompressed
->>> assert bytes(plain, 'ascii') == decompressed
+>>> d = blosc.decompress(compressed)
+>>> assert b == d
 [pycode]>
+
+==== What Up? ====
+
+* Long sequence of the same character
+* Not hard to beat
+* Feel free to try with some input of your own choosing
+* Feel free to compare to @zlib@
+
+==== Help ====
+
+* Version 1.2.7 (latest) not Windows compatible
+* Doesn't yet support compressing via buffer-interface
+
 
 ==== Outline ====
 

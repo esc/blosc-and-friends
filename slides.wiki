@@ -118,6 +118,20 @@ $ ls -la b.npy b.npy.blp
 <<<images/bloscpack.pdf, scale=0.3>>>
 [center]>
 
+==== Numpy support ====[containsverbatim]
+
+* Python-Blosc can also pack an array:
+
+<[pyconcode]
+>>> %timeit c = blosc.pack_array(a)
+10 loops, best of 3: 40.2 ms per loop
+>>> %timeit c = bloscpack.pack_ndarray_str(a)
+100 loops, best of 3: 9.81 ms per loop
+[pyconcode]>
+
+* Internal copy vs. pointer operation
+* Numpy metadata is stored in metadata section
+
 ==== Help ====
 
 * @pack\_ndarray\_'''str'''@ <-- '''str''', really?!

@@ -36,20 +36,20 @@
 
 ==== Code, Yo! ====[containsverbatim]
 
-<[pycode]
+<[pyconcode]
 >>> import blosc
 >>> b = b"b"*888
 >>> c = blosc.compress(plain, typesize=8)
 >>> print(len(b)/len(c))
 23.36842105263158
-[pycode]>
+[pyconcode]>
 
 ==== C'mmon man, your pulling my leg?! ==== [containsverbatim]
 
-<[pycode]
+<[pyconcode]
 >>> d = blosc.decompress(compressed)
 >>> assert b == d
-[pycode]>
+[pyconcode]>
 
 ==== What Up? ====
 
@@ -80,26 +80,26 @@
 
 ==== More Code, Yo! ====[containsverbatim]
 
-<[pycode]
+<[pyconcode]
 >>> import bloscpack, numpy
 >>> b = numpy.arange(5e6)
 >>> c = bloscpack.pack_ndarray_str(b)
 >>> len(b)/len(c)
 15.359992135684026
-[pycode]>
+[pyconcode]>
 
 ==== And Back Again ====[containsverbatim]
 
-<[pycode]
+<[pyconcode]
 >>> d = bloscpack.unpack_ndarray_str(c)
 >>> assert (b == d).all()
-[pycode]>
+[pyconcode]>
 
 ==== Command-line Usability ====[containsverbatim]
 
-<[pycode]
+<[pyconcode]
 >>> np.save('b.npy', b)
-[pycode]>
+[pyconcode]>
 
 <[consolecode]
 $ ./blpk compress b.npy

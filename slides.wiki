@@ -92,6 +92,10 @@
 >>> c = bloscpack.pack_ndarray_str(b)
 >>> len(b)/len(c)
 15.359992135684026
+>>> c = bloscpack.pack_ndarray_str(b,
+... blosc_args=bloscpack.BloscArgs(clevel=9, cname='lz4'))
+>>> len(b)/len(c)
+17.693979092794304
 [pyconcode]>
 
 ==== And Back Again ====[containsverbatim]
@@ -109,9 +113,11 @@
 
 <[consolecode]
 $ ./blpk compress b.npy
-$ ls -la b.npy b.npy.blp
--rw------- 1 esc esc 40000080 May 13 21:50 b.npy
--rw------- 1 esc esc   325635 May 13 21:52 b.npy.blp
+$ ./blpk compress -l 9 -c lz4 b.npy b.npy.lv9lz4.blp
+$ ls -lh b.*
+-rw------- 1 esc esc  39M May 13 21:50 b.npy
+-rw------- 1 esc esc 319K May 13 21:52 b.npy.blp
+-rw------- 1 esc esc 277K May 17 20:39 b.npy.lv9lz4.blp
 [consolecode]>
 
 

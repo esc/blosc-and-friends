@@ -194,6 +194,59 @@ $ ls -lh b.*
 * '''chunks'''
 [columns]>
 
+==== Creating a @CArray@ ====[containsverbatim]
+
+<[pyconcode]
+>>> b = bcolz.arange(5e6)
+>>> b
+carray((5000000,), float64)
+  nbytes: 38.15 MB; cbytes: 1.45 MB; ratio: 26.33
+  cparams := cparams(clevel=5, shuffle=True, cname='blosclz')
+[  0.00000000e+00   1.00000000e+00   2.00000000e+00 ...,   4.99999700e+06
+   4.99999800e+06   4.99999900e+06]
+[pyconcode]>
+
+==== Variation ====[containsverbatim]
+
+<[pyconcode]
+>>> b = bcolz.arange(5e6, cparams=bcolz.cparams(clevel=9, cname='lz4'))
+
+>>> b
+carray((5000000,), float64)
+  nbytes: 38.15 MB; cbytes: 849.54 KB; ratio: 45.98
+  cparams := cparams(clevel=9, shuffle=True, cname='lz4')
+[  0.00000000e+00   1.00000000e+00   2.00000000e+00 ...,   4.99999700e+06
+   4.99999800e+06   4.99999900e+06]
+[pyconcode]>
+
+==== On-Disk ====[containsverbatim]
+
+<[nowiki]
+\begin{pyconcode}
+>>> b = bcolz.arange(5e6, rootdir='bexample', chunklen=1000**2)
+>>> ls -lah bexample/*
+-rw------- 1 esc esc    3 May 17 22:19 bexample/__attrs__
+
+bexample/data:
+total 992K
+drwx------ 2 esc esc 4.0K May 17 22:19 ./
+drwx------ 4 esc esc 4.0K May 17 22:19 ../
+-rw------- 1 esc esc 168K May 17 22:19 __0.blp
+-rw------- 1 esc esc 138K May 17 22:19 __1.blp
+-rw------- 1 esc esc 190K May 17 22:19 __2.blp
+-rw------- 1 esc esc 195K May 17 22:19 __3.blp
+-rw------- 1 esc esc 286K May 17 22:19 __4.blp
+
+bexample/meta:
+total 16K
+drwx------ 2 esc esc 4.0K May 17 22:19 ./
+drwx------ 4 esc esc 4.0K May 17 22:19 ../
+-rw------- 1 esc esc   60 May 17 22:19 sizes
+-rw------- 1 esc esc  122 May 17 22:19 storage
+\end{pyconcode}
+[nowiki]>
+
+
 ==== Layout of the @CTable@ ====
 
 <[columns]

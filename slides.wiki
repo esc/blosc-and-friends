@@ -92,6 +92,7 @@
 >>> c = bloscpack.pack_ndarray_str(b)
 >>> len(b)/len(c)
 15.359992135684026
+
 >>> c = bloscpack.pack_ndarray_str(b,
 ... blosc_args=bloscpack.BloscArgs(clevel=9, cname='lz4'))
 >>> len(b)/len(c)
@@ -141,6 +142,7 @@ $ ls -lh b.*
 >>> b = numpy.arange(5e6)
 >>> %timeit c = blosc.pack_array(b)
 10 loops, best of 3: 40.2 ms per loop
+
 >>> %timeit c = bloscpack.pack_ndarray_str(b)
 100 loops, best of 3: 9.81 ms per loop
 [pyconcode]>
@@ -148,111 +150,88 @@ $ ls -lh b.*
 * Internal copy vs. pointer operation
 * Numpy metadata is stored in metadata section
 
+--1cm--
+
+<[pyconcode]
+>>> from io import BytesIO
+>>> %timeit bio=BytesIO(); np.save(bio, b)
+...
+[pyconcode]>
+
 ==== Help ====
 
 * @pack\_ndarray\_'''str'''@ <-- '''str''', really?!
 * Py3 support not merged :(
 
+
+== Bcolz ==
+
 ==== Outline ====
 
 \tableofcontents[currentsection,currentsubsection]
 
-==== Image Slide ====
+==== Bcolz ====
 
+* Chunked container
+* In-memory and out-of-core
+* @CArray@ and @CTable@
+* Good for '''medium data'''
+* Support basic analytics
+* Uses Blosc and Bloscpack under the hood
+* Python/Cython
+
+==== Layout of the @CArray@ ====
+
+<[columns]
+[[[5cm]]]
 <[center]
-    <<<images/python-logo.pdf, scale=0.40>>>
+<<<images/bcolz.pdf, scale=0.3>>>
 [center]>
+[[[5cm]]]
+* Discontigous
+* Blosc-compressed
+* Homogeneously typed
+* '''chunks'''
+[columns]>
 
-==== slide 2 ====
+==== Layout of the @CTable@ ====
 
-* bullet 1
-* bullet 2
-* bullet 3
+<[columns]
+[[[5cm]]]
+<[center]
+<<<images/bcolz-ctable.pdf, scale=0.3>>>
+[center]>
+[[[5cm]]]
+* Columnar
+* Heterogeneously typed
+* Every column --> @CArray@
+[columns]>
 
-=== Subsection 2 ===
+==== Summary (I) ====
 
-==== Outline ====
+* Everyone always asks me about the relationship of our toolstack
 
-\tableofcontents[currentsection,currentsubsection]
+==== Summary (II) ====
 
-==== Block ====
+* '''Blosc'''
+** The codec
+* '''Python-Blosc'''
+** The Python bindings
+* '''Bloscpack'''
+** Serialization format
+** Command-line interface
+** Fast Numpy serializer
+* '''Bcolz'''
+** Compressed container(s)
+** In-memory and out-of-core
+** Analytics engine
 
-<[block]{Block Title}
-Block contents
-[block]>
+==== Summary (III) ====
 
-==== Special Symbols ====
+* '''Bcolz''' uses a vendored, older version of Bloscpack
+* '''Bcolz''' interfaces with Blosc using it's own Cython bindings
 
-* Tilde: \~{}
-* Tilde: \textasciitilde{}
-* Caret: \^{}
-* Hash: \#
-* Braces: \{\}
-* Dollar: \$
-* Double en: -{}-
-* At in Typewriter: {\tt stash@\{0\} }
-* Exclamation mark in alert: \alert{Attention!}
-
-or use: nowiki
-
-==== Correct Escapes  ====
-
-This only works with my patched version of wiki2beamer.
-
-* @HEAD \@ HEAD@
-* Attention\! Attention\!
-
-==== Verbatim ====[fragile]
-
-\begin{verbatim}
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-\end{verbatim}
-
-[frame]>
-
-==== Verbatim2 ====[containsverbatim]
-
-<[verbatim]
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-[verbatim]>
-
-==== Verbatim Block ====[containsverbatim]
-
-<[block]{Verbatim Block}
-<[verbatim]
-
-wiki2beamer slides.wiki > slides.wiki.tex
-pdflatex slides.tex
-
-[verbatim]>
-[block]>
-
-==== Code ====[containsverbatim]
-
-\begin{pycode}
-def python_func(arg):
-    print 'arg was: ', arg
-
-python_func('Hello World!")
-\end{pycode}
-
-==== Code from file ====
-
-\pyfile{code/code.py}
-
-==== Example ====
-
-<[example]
-    This is an example
-[example]>
-
-==== Conclusion ====
+==== Slide 42 ====
 
 * Open source tools used to make this presentation:
 ** \href{http://wiki2beamer.sourceforge.net/}{Wiki2beamer}

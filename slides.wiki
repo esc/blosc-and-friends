@@ -36,13 +36,19 @@
 
 ==== Code, Yo! ====[containsverbatim]
 
-<[pyconcode]
+<[nowiki]
+\begin{pyconcode}
 >>> import blosc
 >>> b = b"b"*888
->>> c = blosc.compress(plain, typesize=8)
->>> print(len(b)/len(c))
+>>> c = blosc.compress(b, typesize=8)
+>>> len(b)/len(c)
+15.857142857142858
+>>> c = blosc.compress(b, typesize=1, shuffle=False,
+... clevel=9, cname='lz4')
+>>> len(b)/len(c)
 23.36842105263158
-[pyconcode]>
+\end{pyconcode}
+[nowiki]>
 
 ==== C'mmon man, your pulling my leg?! ==== [containsverbatim]
 

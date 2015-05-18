@@ -191,7 +191,7 @@ $ ls -lh b.*
 * Discontigous
 * Blosc-compressed
 * Homogeneously typed
-* '''chunks'''
+* '''Chunks'''
 [columns]>
 
 ==== Creating a @CArray@ ====[containsverbatim]
@@ -257,6 +257,7 @@ drwx------ 4 esc esc 4.0K May 17 22:19 ../
 [[[5cm]]]
 * Columnar
 * Heterogeneously typed
+* '''Columns'''
 * Every column --> @CArray@
 [columns]>
 

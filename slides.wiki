@@ -238,21 +238,19 @@ carray((5000000,), float64)
 <[nowiki]
 \begin{pyconcode}
 >>> b = bcolz.arange(5e6, rootdir='bexample', chunklen=1000**2)
->>> ls -lah bexample/*
+>>> ls -lh bexample/*
 -rw------- 1 esc esc    3 May 17 22:19 bexample/__attrs__
 
 bexample/data:
 total 992K
-drwx------ 2 esc esc 4.0K May 17 22:19 ./
-drwx------ 4 esc esc 4.0K May 17 22:19 ../
 -rw------- 1 esc esc 168K May 17 22:19 __0.blp
 -rw------- 1 esc esc 138K May 17 22:19 __1.blp
-...
+-rw------- 1 esc esc 190K May 20 19:29 __2.blp
+-rw------- 1 esc esc 195K May 20 19:29 __3.blp
+-rw------- 1 esc esc 286K May 20 19:29 __4.blp
 
 bexample/meta:
 total 16K
-drwx------ 2 esc esc 4.0K May 17 22:19 ./
-drwx------ 4 esc esc 4.0K May 17 22:19 ../
 -rw------- 1 esc esc   60 May 17 22:19 sizes
 -rw------- 1 esc esc  122 May 17 22:19 storage
 \end{pyconcode}

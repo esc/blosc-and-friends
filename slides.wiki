@@ -19,8 +19,17 @@
 ==== Blosc ====
 
 <[center]
-<<<images/blosc.pdf, scale=0.3>>>
+<<<images/blosc.pdf, scale=0.35>>>
 [center]>
+
+==== Shuffle ====
+
+<[center]
+<<<images/shuffle.pdf, scale=0.35>>>
+[center]>
+
+* Reorder '''bytes''' within a '''block''' by significance
+* Requires the '''typesize'''
 
 ==== Blosc ====
 

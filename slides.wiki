@@ -244,6 +244,30 @@ drwx------ 4 esc esc 4.0K May 17 22:19 ../
 \end{pyconcode}
 [nowiki]>
 
+* '''@*.blp@''' <-- Bloscpack files
+
+==== Compute: Witness the power of @numexpr@ ====[containsverbatim]
+
+* Uses @numexpr@ under the hood for computation
+* ... because @numexpr@ can do '''blocking''' on '''chunks'''
+
+<[pyconcode]
+>>> a = bcolz.arange(2e8, rootdir='a')
+>>> b = bcolz.arange(2e8, rootdir='b')
+>>> c = bcolz.eval('a**2 + 2 * b', rootdir='c')
+>>> c
+carray((200000000,), float64)
+  nbytes: 1.49 GB; cbytes: 386.22 MB; ratio: 3.95
+  cparams := cparams(clevel=5, shuffle=True, cname='blosclz')
+  rootdir := 'c'
+  mode    := 'a'
+[  0.00000000e+00   3.00000000e+00   8.00000000e+00 ...,   3.99999992e+16
+   3.99999996e+16   4.00000000e+16]
+[pyconcode]>
+
+* Both @a@ and @b@ are about 1.5GB uncompressed
+
+
 
 ==== Layout of the @CTable@ ====
 
@@ -258,6 +282,24 @@ drwx------ 4 esc esc 4.0K May 17 22:19 ../
 * '''Columns'''
 * Every column --> @CArray@
 [columns]>
+
+==== Philosophy of @bcolz@ ====
+
+* Keep it simple
+* Expose a Cython interface to @carray@
+* Layer everything else on-top
+
+--1cm--
+
+* '''bquery''' <-- out of core groupby
+* '''dask''' <-- out-of-core abstraction
+* '''odo''' <-- convert from one format to another
+
+==== Whats coming (maybe) ====
+
+* Networked storage, e.g. S3
+* Better Cython interface
+* True n-dimensionality
 
 ==== Summary (I) ====
 

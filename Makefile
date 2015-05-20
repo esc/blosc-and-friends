@@ -1,5 +1,5 @@
 base = slides
-slidefilename = NAME
+slidefilename = haenel-pygrunn-15-blosc-and-friends
 
 .PHONY: git-sha
 

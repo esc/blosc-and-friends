@@ -206,6 +206,20 @@ carray((5000000,), float64)
    4.99999800e+06   4.99999900e+06]
 [pyconcode]>
 
+==== The @chunks@ ====[containsverbatim]
+
+<[pyconcode]
+>>> b.chunks[0]
+chunk(float64)  nbytes: 524288; cbytes: 18698; ratio: 28.04
+'[  0.00000000e+00   1.00000000e+00   2.00000000e+00 ...,   6.55330000e+04
+    6.55340000e+04   6.55350000e+04]'
+>>> b.chunks[0].to_numpy_array()  # currently available as pull-request only
+array([  0.00000000e+00,   1.00000000e+00,   2.00000000e+00, ...,
+         6.55330000e+04,   6.55340000e+04,   6.55350000e+04])
+>>> type b.chunks
+list
+[pyconcode]>
+
 ==== Variation ====[containsverbatim]
 
 <[pyconcode]

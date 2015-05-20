@@ -323,7 +323,8 @@ carray((200000000,), float64)
 ==== Summary (III) ====
 
 * '''Bcolz''' uses a vendored, older version of Bloscpack
-* '''Bcolz''' interfaces with Blosc using it's own Cython bindings
+* '''Bcolz''' interfaces with Blosc using it's own Cython bindings (not \
+  Python-Blosc)
 
 ==== Slide 42 ====
 

@@ -30,7 +30,7 @@
 
 ==== Python-Blosc ====
 
-* '''Python-Blosc''' <-- python bindings
+* '''Python-Blosc''' <-- Python bindings
 * Blosc (and codecs) are vendored
 * Can be dynamically linked
 
@@ -233,9 +233,7 @@ drwx------ 2 esc esc 4.0K May 17 22:19 ./
 drwx------ 4 esc esc 4.0K May 17 22:19 ../
 -rw------- 1 esc esc 168K May 17 22:19 __0.blp
 -rw------- 1 esc esc 138K May 17 22:19 __1.blp
--rw------- 1 esc esc 190K May 17 22:19 __2.blp
--rw------- 1 esc esc 195K May 17 22:19 __3.blp
--rw------- 1 esc esc 286K May 17 22:19 __4.blp
+...
 
 bexample/meta:
 total 16K

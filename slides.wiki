@@ -212,9 +212,9 @@ $ ls -lh b.*
 
 ==== Bcolz ====
 
-* Chunked container
-* In-memory and out-of-core
+* Chunked container(s)
 * @carray@ and @ctable@
+* In-memory and out-of-core
 * Good for '''medium data'''
 * Support basic analytics
 * Uses Blosc and Bloscpack under the hood

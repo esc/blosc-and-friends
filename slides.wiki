@@ -264,6 +264,7 @@ carray((5000000,), float64)
 * (The worse compression ratio compared to Bloscpack is a result of the \
    so-called '''leftovers''' which remain uncompressed)
 
+
 ==== The @chunks@ ====[containsverbatim]
 
 <[pyconcode]
@@ -271,7 +272,7 @@ carray((5000000,), float64)
 chunk(float64)  nbytes: 524288; cbytes: 18698; ratio: 28.04
 '[  0.00000000e+00   1.00000000e+00   2.00000000e+00 ...,   6.55330000e+04
     6.55340000e+04   6.55350000e+04]'
->>> b.chunks[0].to_numpy_array()  # currently available as pull-request only
+>>> b.chunks[0][:]  # slice returns a Numpy array
 array([  0.00000000e+00,   1.00000000e+00,   2.00000000e+00, ...,
          6.55330000e+04,   6.55340000e+04,   6.55350000e+04])
 >>> type b.chunks

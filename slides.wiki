@@ -15,7 +15,7 @@
 * Freelance developer and consultant
 * Free-software enthusiast
 * Check my homepage: \href{http://haenel.co}{http://haenel.co}
-* Follow me on Twitter: @esc\_\_\_@
+* Follow me on Twitter: \href{https://twitter.com/esc___}{@esc\_\_\_@}
 
 ==== Blosc ====
 

@@ -25,7 +25,8 @@
 * '''Metacodec''' because it can drive '''[lz4|snappy|zlib]'''
 * (But also comes with it's very own '''blosclz''')
 
-==== Blosc ====
+
+==== Schematic ====
 
 <[center]
 <<<images/blosc.pdf, scale=0.35>>>

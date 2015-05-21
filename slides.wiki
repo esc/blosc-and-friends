@@ -75,17 +75,16 @@
 
 ==== Help ====
 
-* Version 1.2.7 (latest) not Windows compatible
 * Doesn't yet support compressing via buffer-interface
 
+
+== Bloscpack ==
 
 ==== Outline ====
 
 \tableofcontents[currentsection]
 
-== Bloscpack ==
-
-==== And now some «stuff» layerd on top! ====
+==== And now some «stuff» layered on top! ====
 
 * '''Bloscpack'''
 * Command-line interface
@@ -183,13 +182,13 @@ $ ls -lh b.*
 
 * Chunked container
 * In-memory and out-of-core
-* @CArray@ and @CTable@
+* @carray@ and @ctable@
 * Good for '''medium data'''
 * Support basic analytics
 * Uses Blosc and Bloscpack under the hood
 * Python/Cython
 
-==== Layout of the @CArray@ ====
+==== Layout of the @carray@ ====
 
 <[columns]
 [[[5cm]]]
@@ -203,7 +202,7 @@ $ ls -lh b.*
 * '''Chunks'''
 [columns]>
 
-==== Creating a @CArray@ ====[containsverbatim]
+==== Creating a @carray@ ====[containsverbatim]
 
 <[pyconcode]
 >>> b = bcolz.arange(5e6)
@@ -290,7 +289,7 @@ carray((200000000,), float64)
 
 
 
-==== Layout of the @CTable@ ====
+==== Layout of the @ctable@ ====
 
 <[columns]
 [[[5cm]]]
@@ -301,10 +300,10 @@ carray((200000000,), float64)
 * Columnar
 * Heterogeneously typed
 * '''Columns'''
-* Every column --> @CArray@
+* Every column --> @carray@
 [columns]>
 
-==== Philosophy of @bcolz@ ====
+==== Philosophy of @Bcolz@ ====
 
 * Keep it simple
 * Expose a Cython interface to @carray@
@@ -319,8 +318,9 @@ carray((200000000,), float64)
 ==== Whats coming (maybe) ====
 
 * Networked storage, e.g. S3
+* Bcolz based server / database
 * Better Cython interface
-* True n-dimensionality
+* True n-dimensionality (really?)
 
 ==== Summary (I) ====
 

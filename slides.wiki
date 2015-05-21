@@ -9,6 +9,14 @@
 * All examples with Py3
 * No comparisons to other technologies
 
+==== @whoami@ ====
+
+* Valentin Haenel
+* Freelance developer and consultant
+* Free-software enthusiast
+* Check my homepage: \href{http://haenel.co}{http://haenel.co}
+* Follow me on Twitter: @esc\_\_\_@
+
 ==== Blosc ====
 
 * '''Blocking''' by operating on data in blocks

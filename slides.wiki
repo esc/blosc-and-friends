@@ -94,7 +94,7 @@ $ pip install blosc
 ==== C'mmon man, your pulling my leg?! ==== [containsverbatim]
 
 <[pyconcode]
->>> d = blosc.decompress(compressed)
+>>> d = blosc.decompress(c)
 >>> assert b == d
 [pyconcode]>
 

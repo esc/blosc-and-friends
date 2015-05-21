@@ -216,7 +216,7 @@ $ ls -lh b.*
 
 \tableofcontents[currentsection,currentsubsection]
 
-==== Bcolz ====
+==== Bcolz ====[containsverbatim]
 
 * Chunked container(s)
 * @carray@ and @ctable@
@@ -225,6 +225,13 @@ $ ls -lh b.*
 * Support basic analytics
 * Uses Blosc and Bloscpack under the hood
 * Python/Cython
+
+--0.5cm--
+
+<[consolecode]
+$ pip install bcolz
+$ conda install bcolz
+[consolecode]>
 
 ==== Layout of the @carray@ ====
 

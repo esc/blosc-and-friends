@@ -259,6 +259,11 @@ carray((5000000,), float64)
    4.99999800e+06   4.99999900e+06]
 [pyconcode]>
 
+--1cm--
+
+* (The worse compression ratio compared to Bloscpack is a result of the \
+   so-called '''leftovers''' which remain uncompressed)
+
 ==== The @chunks@ ====[containsverbatim]
 
 <[pyconcode]

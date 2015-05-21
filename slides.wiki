@@ -51,6 +51,10 @@
 
 ==  Python-Blosc ==
 
+==== Outline ====
+
+\tableofcontents[currentsection]
+
 ==== Python-Blosc ====
 
 * '''Python-Blosc''' <-- Python bindings

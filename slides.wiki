@@ -55,11 +55,14 @@
 
 \tableofcontents[currentsection]
 
-==== Python-Blosc ====
+==== Python-Blosc ====[containsverbatim]
 
 * '''Python-Blosc''' <-- Python bindings
+* Python C-API
 * Blosc (and codecs) are vendored
 * Can be dynamically linked
+
+--0.5cm--
 
 <[consolecode]
 $ pip install blosc

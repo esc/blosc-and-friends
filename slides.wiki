@@ -41,9 +41,12 @@
 * Reorder '''bytes''' within a '''block''' by significance
 * Requires the '''typesize'''
 
-==== Blosc ====
+==== Blosc... Why? ====
 
-* Other codecs vendored
+* Accelerate computation by compression
+* Keep data compressed in memory
+* Mitigate the '''starving CPU problem'''
+* Transmit data faster from memory --> CPU
 
 ==  Python-Blosc ==
 

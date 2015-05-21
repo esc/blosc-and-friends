@@ -254,6 +254,8 @@ carray((5000000,), float64)
    4.99999800e+06   4.99999900e+06]
 [pyconcode]>
 
+
+
 ==== On-Disk ====[containsverbatim]
 
 <[nowiki]
@@ -360,7 +362,13 @@ carray((200000000,), float64)
 * '''Bcolz''' interfaces with Blosc using it's own Cython bindings (not \
   Python-Blosc)
 
-==== Slide 42 ====
+==== Famous last words ====
+
+* Links:
+*
+** \href{http://blosc.org}{http://blosc.org}
+** \href{https://github.com/blosc}{https://github.com/blosc}
+** \href{https://github.com/esc/blosc-and-friends}{https://github.com/esc/blosc-and-friends}
 
 * Open source tools used to make this presentation:
 ** \href{http://wiki2beamer.sourceforge.net/}{Wiki2beamer}

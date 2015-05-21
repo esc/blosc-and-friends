@@ -365,7 +365,6 @@ carray((200000000,), float64)
 ==== Famous last words ====
 
 * Links:
-*
 ** \href{http://blosc.org}{http://blosc.org}
 ** \href{https://github.com/blosc}{https://github.com/blosc}
 ** \href{https://github.com/esc/blosc-and-friends}{https://github.com/esc/blosc-and-friends}

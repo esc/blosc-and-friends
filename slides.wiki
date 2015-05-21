@@ -1,14 +1,3 @@
-== Blosc  ==
-
-==== Outline ====
-
-\tableofcontents[currentsection]
-
-==== Disclaimer ====
-
-* All examples with Py3
-* No comparisons to other technologies
-
 ==== @whoami@ ====
 
 * Valentin Haenel
@@ -16,6 +5,21 @@
 * Free-software enthusiast
 * Check my homepage: \href{http://haenel.co}{http://haenel.co}
 * Follow me on Twitter: \href{https://twitter.com/esc___}{@esc\_\_\_@}
+
+== Blosc  ==
+
+==== Outline ====
+
+\tableofcontents
+
+==== Disclaimer ====
+
+* All examples with Py3
+* No comparisons to other technologies
+
+==== Outline ====
+
+\tableofcontents[currentsection]
 
 ==== Blosc ====
 

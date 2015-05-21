@@ -61,6 +61,10 @@
 * Blosc (and codecs) are vendored
 * Can be dynamically linked
 
+<[consolecode]
+$ pip install blosc
+[consolecode]>
+
 ==== Code, Yo! ====[containsverbatim]
 
 <[nowiki]

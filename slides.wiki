@@ -116,13 +116,19 @@ $ pip install blosc
 
 \tableofcontents[currentsection]
 
-==== And now some «stuff» layered on top! ====
+==== And now some «stuff» layered on top! ====[containsverbatim]
 
 * '''Bloscpack'''
 * Command-line interface
 * File-format
 * '''Numpy''' array serialization
 * Pure-python based on Python-Blosc
+
+--0.5cm--
+
+<[consolecode]
+$ pip install bloscpack
+[consolecode]>
 
 ==== More Code, Yo! ====[containsverbatim]
 

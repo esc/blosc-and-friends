@@ -136,13 +136,13 @@ $ pip install bloscpack
 >>> import bloscpack, numpy
 >>> b = numpy.arange(5e6)
 >>> c = bloscpack.pack_ndarray_str(b)
->>> len(b)/len(c)
-15.359992135684026
+>>> b.nbytes/len(c)
+122.8799370854722
 
 >>> c = bloscpack.pack_ndarray_str(b,
 ... blosc_args=bloscpack.BloscArgs(clevel=9, cname='lz4'))
->>> len(b)/len(c)
-17.693979092794304
+>>> b.nbytes/len(c)
+141.55183274235443
 [pyconcode]>
 
 ==== And Back Again ====[containsverbatim]

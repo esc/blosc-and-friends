@@ -245,6 +245,8 @@ $ conda install bcolz
 * Blosc-compressed
 * Homogeneously typed
 * '''Chunks'''
+* Great for appending
+* Not so good for random indexing
 [columns]>
 
 ==== Creating a @carray@ ====[containsverbatim]

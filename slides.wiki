@@ -48,6 +48,7 @@
 * Reorder '''bytes''' within a '''block''' by significance
 * Requires the '''typesize'''
 * Can leverage '''SSE2''' or '''AVX''' if available
+* Great for '''time-series''' data
 
 ==== Blosc... Why? ====
 

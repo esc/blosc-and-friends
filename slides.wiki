@@ -400,10 +400,14 @@ carray((200000000,), float64)
 
 ==== Famous last words ====
 
+* We '''are''' seeking sponosrs / donations / commercial clients
+** \href{http://blosc.org/blog/seeking-sponsoship.html}{http://blosc.org/blog/seeking-sponsoship.html}
+
 * Links:
 ** \href{http://blosc.org}{http://blosc.org}
 ** \href{https://github.com/blosc}{https://github.com/blosc}
 ** \href{https://github.com/esc/blosc-and-friends}{https://github.com/esc/blosc-and-friends}
+
 
 * Open source tools used to make this presentation:
 ** \href{http://wiki2beamer.sourceforge.net/}{Wiki2beamer}

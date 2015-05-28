@@ -106,11 +106,6 @@ $ pip install blosc
 * Feel free to try with some input of your own choosing
 * Feel free to compare to @zlib@
 
-==== Help ====
-
-* Doesn't yet support compressing via buffer-interface
-
-
 == Bloscpack ==
 
 ==== Outline ====

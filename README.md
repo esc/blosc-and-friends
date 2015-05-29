@@ -2,7 +2,7 @@
 
 ## Description
 
-Talk about the Blosc ecosystem at PyGrunn 2015.
+Talk about the Blosc ecosystem at PyGrunn 2015 and PyData-Berlin 2015.
 
 
 ## Author

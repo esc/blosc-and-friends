@@ -4,6 +4,8 @@
 
 Talk about the Blosc ecosystem at PyGrunn 2015 and PyData-Berlin 2015.
 
+PDFs can be found in the ``pdfs/`` subdirectory.
+
 
 ## Author
 
